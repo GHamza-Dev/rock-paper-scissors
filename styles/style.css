@@ -29,7 +29,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
-    font-family: sans-serif;
+    font-family: Barlow Semi Condensed Arial, Helvetica, sans-serif;
 }
 
 
@@ -46,11 +46,12 @@ body {
 
 header {
     max-width: 100%;
+    margin-top: 20px;
 }
 
 header .h_content {
     width: 80%;
-    margin: 20px auto;
+    margin: 30px auto;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -91,11 +92,12 @@ header span:nth-child(2) {
 }
 
 
-/** Section **/
+/** Section : choose **/
 
 section.choose {
     max-width: 100%;
     margin: 100px auto;
+    display: none;
 }
 
 section.choose .choices {
@@ -122,7 +124,7 @@ section.choose .r_center {
     justify-content: center;
 }
 
-section.choose span {
+section span {
     background-color: white;
     width: 80px;
     height: 80px;
@@ -136,9 +138,10 @@ section.choose span {
     pointer-events: none;
 }
 
-section.choose .paper,
-section.choose .scissors,
-section.choose .rock {
+section .paper,
+section .scissors,
+section .rock,
+section .choice {
     border: 15px solid;
     border-top: 17px solid;
     width: 94px;
@@ -147,16 +150,70 @@ section.choose .rock {
     cursor: pointer;
 }
 
-section.choose .paper {
+section .paper {
     border-color: var(--Paper-Gradient);
 }
 
-section.choose .scissors {
+section .scissors {
     border-color: var(--Scissors-Gradient);
 }
 
-section.choose .rock {
+section .rock {
     border-color: var(--Rock-Gradient);
+}
+
+
+/** Section : result **/
+
+section.result {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+section.result .row {
+    width: 80%;
+    margin: auto;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.result p {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    margin-top: 25px;
+}
+
+.human_choice,
+.comp_choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.result .result_text p {
+    font-size: 2.5rem;
+}
+
+#play_again {
+    margin-top: 15px;
+    width: 215px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(214, 47%, 23%);
+    letter-spacing: 1.2px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 7px;
 }
 
 
@@ -168,8 +225,8 @@ section.choose .rock {
     bottom: 60px;
     left: 50%;
     font-weight: 500;
-    font-size: 1rem;
-    padding: 9px 25px;
+    font-size: .9rem;
+    padding: 8px 25px;
     letter-spacing: 1.1px;
     background-color: transparent;
     color: #fff;
