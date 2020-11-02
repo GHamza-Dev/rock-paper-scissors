@@ -1,0 +1,181 @@
+:root {
+    /** Primary **/
+    --Scissors-Gradient: hsl(39, 89%, 49%);
+    --to-Scissors-Gradient: hsl(40, 84%, 53%);
+    --Paper-Gradient: hsl(230, 89%, 62%);
+    --to-Paper-Gradient: hsl(230, 89%, 65%);
+    --Rock-Gradient: hsl(349, 71%, 52%);
+    --to-Rock-Gradient: hsl(349, 70%, 56%);
+    --Cyan: hsl(189, 59%, 53%);
+    --to-Cyan: hsl(189, 58%, 57%);
+    /** Neutral **/
+    --dark-text: hsl(229, 25%, 31%);
+    --score-text: hsl(229, 64%, 46%);
+    --header-outline: hsl(217, 16%, 45%);
+    /** Background **/
+    --bkg: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}
+
+@import 'https: //fonts.google.com/specimen/Barlow+Semi+Condensed';
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+body {
+    background: hsl(214, 47%, 23%);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: sans-serif;
+}
+
+
+/*** WRAPPER **/
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+/** HEADER **/
+
+header {
+    max-width: 100%;
+}
+
+header .h_content {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border: solid var(--header-outline) 4px;
+    border-radius: 6px;
+}
+
+header .logo {
+    width: 100px;
+    padding: 14px;
+}
+
+header .score {
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 14px;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+header span:nth-child(1) {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--score-text);
+}
+
+header span:nth-child(2) {
+    color: var(--dark-text);
+    font-size: 1.5rem;
+}
+
+
+/** Section **/
+
+section.choose {
+    max-width: 100%;
+    margin: 100px auto;
+}
+
+section.choose .choices {
+    width: 70%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('/images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 50px;
+    background-size: 80% 80%;
+    height: 250px;
+}
+
+section.choose .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.choose .r_center {
+    justify-content: center;
+}
+
+section.choose span {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 7px;
+    box-shadow: 0 -4px rgb(177, 169, 169);
+    pointer-events: none;
+}
+
+section.choose .paper,
+section.choose .scissors,
+section.choose .rock {
+    border: 15px solid;
+    border-top: 17px solid;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+section.choose .paper {
+    border-color: var(--Paper-Gradient);
+}
+
+section.choose .scissors {
+    border-color: var(--Scissors-Gradient);
+}
+
+section.choose .rock {
+    border-color: var(--Rock-Gradient);
+}
+
+
+/** button : rules **/
+
+#rules {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 60px;
+    left: 50%;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 9px 25px;
+    letter-spacing: 1.1px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: solid 2px hsl(217, 24%, 81%);
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 2;
+}
