@@ -40,12 +40,12 @@
             <div class="choices">
                 <!-- row -->
                 <div class="row r_space_bet">
-                    <div class="paper">
+                    <div class="paper choice">
                         <span>
                           <img src="./images/icon-paper.svg" alt="paper">
                         </span>
                     </div>
-                    <div class="scissors">
+                    <div class="scissors choice">
                         <span>
                           <img src="./images/icon-scissors.svg" alt="scissors"> 
                         </span>
@@ -53,7 +53,7 @@
                 </div>
                 <!-- row -->
                 <div class="row r_center">
-                    <div class="rock">
+                    <div class="rock choice">
                         <span>
                           <img src="./images/icon-rock.svg" alt="rock">
                       </span>
@@ -66,19 +66,21 @@
         <!-- Section : Result -->
         <section class="result">
             <div class="row">
+                <!-- Display human choice -->
                 <div class="human_choice">
-                    <div class="choice paper">
+                    <div class="choice_r ">
                         <span>
-                      <img src="./images/icon-paper.svg" alt="paper">
-                    </span>
+                            <img src="./images/icon-paper.svg" alt="paper">
+                        </span>
                     </div>
                     <p>You picked</p>
                 </div>
+                <!-- Display house choice -->
                 <div class="comp_choice">
-                    <div class="choice scissors">
+                    <div class="choice_r ">
                         <span>
-                      <img src="./images/icon-scissors.svg" alt="scissors">
-                    </span>
+                            <img src="./images/icon-scissors.svg" alt="scissors">
+                        </span>
                     </div>
                     <p>The house picked</p>
                 </div>
@@ -96,11 +98,13 @@
           rules
         </button>
     </div>
+    <!-- Rules modal -->
     <div class="rules_modal">
         <p>Rules</p>
         <img src="./images/image-rules.svg" alt="rules">
         <img id="close" src="./images/icon-close.svg" alt="close">
     </div>
+    <!-- END : rules modal -->
 
 
     <div class="attribution" style="display:none;">

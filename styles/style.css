@@ -96,13 +96,12 @@ header span:nth-child(2) {
 
 section.choose {
     max-width: 100%;
-    margin: 100px auto;
-    display: none;
+    margin: 80px auto;
 }
 
 section.choose .choices {
     width: 70%;
-    margin: 100px auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -141,7 +140,7 @@ section span {
 section .paper,
 section .scissors,
 section .rock,
-section .choice {
+section .choice_r {
     border: 15px solid;
     border-top: 17px solid;
     width: 94px;
@@ -171,6 +170,7 @@ section.result {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    display: none;
 }
 
 section.result .row {
@@ -253,6 +253,7 @@ section.result .result_text p {
     justify-content: space-evenly;
     align-items: center;
     align-items: center;
+    display: none;
 }
 
 .rules_modal p {
