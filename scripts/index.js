@@ -4,12 +4,13 @@
  *
  */
 
-const choose = document.querySelector('.choose');
-const result = document.querySelector('.result');
+const score = document.querySelector('.scr'); // score 
+const choose = document.querySelector('.choose'); // Section : choose
+const result = document.querySelector('.result'); // Section  : Display result
 
-const choices = document.querySelectorAll('.choice');
-const rules = document.getElementById('rules');
-const close = document.getElementById('close');
+const choices = document.querySelectorAll('.choice'); // Choices
+const rulesBtn = document.getElementById('rules'); // Rules button
+const closeBtn = document.getElementById('close'); // Close button
 
 
 const humanOutput = document.querySelector('.human_choice');
@@ -18,7 +19,7 @@ const compOutput = document.querySelector('.comp_choice');
 const humanImg = humanOutput.querySelector('img');
 const compImg = compOutput.querySelector('img');
 
-const rText = document.querySelector('.result_text p');
+const rText = document.querySelector('.result_text p'); // Display text : YOU LOSE, WIN or Draw
 
 //console.log(humanOutput.firstElementChild);
 
@@ -65,8 +66,11 @@ class Original {
             return 0;
         } else {
             if ((compCh === 'paper' && humanCh === 'scissors') || (compCh === 'scissors' && humanCh === 'rock') || (compCh === 'rock' && humanCh === 'paper')) {
+                this.score++;
                 return 1;
+
             } else {
+                this.score--;
                 return -1;
             }
         }
@@ -83,7 +87,7 @@ class Original {
         } else {
             rText.textContent = "You lose";
         }
-
+        score.textContent = this.score;
         humanImg.src = `${path}${humanCh}.svg`;
         compImg.src = `${path}${compCh}.svg`;
         humanOutput.firstElementChild.classList.add(humanCh);
@@ -121,10 +125,20 @@ class Original {
 // Init game
 const game = new Original(0);
 window.addEventListener('click', (e) => {
-    //console.log(game.getHuman(e) + ' : ' + game.getHouse());
     game.init(e);
 });
 // Play again
-document.getElementById('play_again').addEventListener('click', () => {
-    game.playAgain();
+document.getElementById('play_again').addEventListener('click', game.playAgain);
+
+
+// Handle Rules Modal
+// Show Modal
+document.getElementById('rules').addEventListener('click', () => {
+    document.querySelector('.rules_modal').style.display = 'flex';
 });
+// Hide Modal
+document.getElementById('close').addEventListener('click', () => {
+    document.querySelector('.rules_modal').style.display = 'none';
+});
+
+var rulesModal = document.querySelector('.rules_modal');

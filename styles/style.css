@@ -142,7 +142,9 @@ section .scissors,
 section .rock,
 section .choice_r {
     border: 15px solid;
-    border-top: 17px solid;
+    border-top: 18px solid;
+    border-right: 17px solid;
+    border-left: 17px solid;
     width: 94px;
     height: 94px;
     border-radius: 50%;
@@ -150,15 +152,18 @@ section .choice_r {
 }
 
 section .paper {
-    border-color: var(--Paper-Gradient);
+    border-color: var(--to-Paper-Gradient);
+    box-shadow: 0 4px var(--Paper-Gradient);
 }
 
 section .scissors {
-    border-color: var(--Scissors-Gradient);
+    border-color: var(--to-Scissors-Gradient);
+    box-shadow: 0 4px var(--Scissors-Gradient);
 }
 
 section .rock {
-    border-color: var(--Rock-Gradient);
+    border-color: var(--to-Rock-Gradient);
+    box-shadow: 0 4px var(--Rock-Gradient);
 }
 
 
