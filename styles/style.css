@@ -37,8 +37,15 @@ body {
 
 .wrapper {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
+}
+
+@media screen and (min-width:500px) {
+    .wrapper {
+        width: 500px;
+        margin: auto;
+    }
 }
 
 
